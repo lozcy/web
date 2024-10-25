@@ -9,7 +9,7 @@
 #include <cstdio>
 #include <exception>
 #include <pthread.h>
-#include "locker.h"
+#include "../lock/locker.h"
 
 /*线程池类 模板参数T是任务类*/
 template <typename T >
@@ -107,7 +107,7 @@ private:
             if (!request) {
                 continue;
             }
-            request->process();
+            request->execute();
         }
     }
 #endif //WEB_THREADPOOL_H

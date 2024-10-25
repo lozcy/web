@@ -611,3 +611,8 @@ void http_conn::process() {
     }
     modfd(m_epolled, m_sockfd, EPOLLOUT);
 }
+
+/* 线程执行函数 */
+void http_coon::execute() {
+    this->process();
+}

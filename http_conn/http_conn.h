@@ -66,7 +66,8 @@ public:
     /*非阻塞读\写操作*/
     bool read();
     bool write();
-
+    /*执行函数*/
+    void execute();
 private:
     /*初始化连接*/
     void init();
